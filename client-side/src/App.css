@@ -15,32 +15,6 @@ p {
   pointer-events: none;
 }
 
-.Attemd-system {
-  border-color: black;
-  width: 50%;
-  margin: 15px auto;
-  border: 2px solid black;
-  border-radius: 10px;
-}
-
-.Attend-table-component {
-  margin-top: 15px;
-}
-
-.Attend-table-div {
-  max-height: 400px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.Attend-table-component table {
-  width: 100%;
-  table-layout: fixed;
-  border-color: black;
-  border: 1px solid black;
-  border-collapse: collapse;
-}
-
 table,
 td {
   padding: 10px 0;
@@ -50,33 +24,6 @@ td {
   transition: 0.5s;
 }
 
-.Attend-table-component td:nth-child(1) {
-  text-align: left;
-  padding-left: 5px;
-  border-right: none;
-}
-
-.Attend-table-component td:not(:first-child) {
-  border-left: none;
-  border-right: none;
-  width: 10%;
-}
-
-.Attend-table-component tr:hover {
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  background-color: rgb(219, 213, 213);
-}
-
-.Attend-system-content {
-  margin: 30px 20px;
-}
-
-.Attend-search-bar input,
-label {
-  display: block;
-}
-
 input[type="text"]:focus,
 input[type="text"]:hover {
   -webkit-transition: 0.5s;
@@ -84,25 +31,6 @@ input[type="text"]:hover {
   border: 1px solid orange;
 }
 
-.Attend-search-bar label {
-  font-size: 0.8em;
-  text-align: left;
-}
-
-.Attend-search-bar input {
-  width: 100%;
-  border: 1px solid black;
-  border-radius: 20px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  outline: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 .App-header {
   background-color: grey;
   min-height: 10vh;
@@ -117,7 +45,7 @@ input[type="text"]:hover {
 
 .App-body {
   background-color: #ffffff;
-  min-height: 80vh;
+  min-height: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -130,15 +58,6 @@ input[type="text"]:hover {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 html {
   box-sizing: border-box;
 }
@@ -146,34 +65,4 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-}
-
-.Tooltip-save,
-.Tooltip-remove,
-.Tooltip-trash {
-  position: relative;
-  display: inline-block;
-}
-
-.Tooltip-save .Tooltip-text-save,
-.Tooltip-remove .Tooltip-text-remove,
-.Tooltip-trash .Tooltip-text-trash {
-  visibility: hidden;
-  width: auto;
-  min-width: 120px;
-  background-color: black;
-  color: #fff;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 5px;
-  position: absolute;
-  z-index: 1;
-  left: -120px;
-  top: 10px;
-}
-
-.Tooltip-save:hover .Tooltip-text-save,
-.Tooltip-remove:hover .Tooltip-text-remove,
-.Tooltip-trash:hover .Tooltip-text-trash {
-  visibility: visible;
 }

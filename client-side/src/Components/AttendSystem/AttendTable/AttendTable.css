@@ -1,0 +1,65 @@
+.Attend-table-component {
+  margin-top: 15px;
+}
+
+.Attend-table-div {
+  max-height: 400px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.Attend-table-component table {
+  width: 100%;
+  table-layout: fixed;
+  border-color: black;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.Attend-table-component td:nth-child(1) {
+  text-align: left;
+  padding-left: 5px;
+  border-right: none;
+}
+
+.Attend-table-component td:not(:first-child) {
+  border-left: none;
+  border-right: none;
+  width: 10%;
+}
+
+.Attend-table-component tr:hover {
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  background-color: rgb(219, 213, 213);
+}
+
+.Tooltip-save,
+.Tooltip-remove,
+.Tooltip-trash {
+  position: relative;
+  display: inline-block;
+}
+
+.Tooltip-save .Tooltip-text-save,
+.Tooltip-remove .Tooltip-text-remove,
+.Tooltip-trash .Tooltip-text-trash {
+  visibility: hidden;
+  width: auto;
+  min-width: 120px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  position: absolute;
+  z-index: 1;
+  left: -120px;
+  top: 10px;
+}
+
+.Tooltip-save:hover .Tooltip-text-save,
+.Tooltip-remove:hover .Tooltip-text-remove,
+.Tooltip-trash:hover .Tooltip-text-trash {
+  visibility: visible;
+}

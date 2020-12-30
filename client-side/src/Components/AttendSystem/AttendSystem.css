@@ -1,0 +1,15 @@
+.Attemd-system {
+  border-color: black;
+  width: 50%;
+  margin: 15px auto;
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+.Attend-system-content {
+  margin: 30px 20px;
+}
+
+.Attend-system-title {
+  padding-bottom: 15px;
+}

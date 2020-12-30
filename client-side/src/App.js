@@ -1,15 +1,15 @@
 import './App.css';
-import AttendSystem from "./AttendSystem/AttendSystem";
+import { BrowserRouter } from "react-router-dom";
+
+import Menu from "./Components/Menu/Menu"
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      </header>
-      <body className="App-body">
-        <AttendSystem />
-      </body>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+          <Menu />
+      </div>
+    </BrowserRouter>
   );
 }
 

@@ -1,0 +1,18 @@
+.Attend-search-bar input,
+label {
+  display: block;
+}
+
+.Attend-search-bar label {
+  font-size: 0.8em;
+  text-align: left;
+}
+
+.Attend-search-bar input {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 20px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
