@@ -10,6 +10,9 @@ class StudentAttendanceDomain():
             date=studentAttendance["date"],
             status=studentAttendance["status"])
 
+    def getAll(self):
+        return self.studentAttendance.getAll()
+
     def update(self):
         self.studentAttendance.update()
 

@@ -4,6 +4,9 @@ from flask_cors import CORS, cross_origin
 from werkzeug.exceptions import HTTPException
 from flask_sqlalchemy import SQLAlchemy
 
+
+from Domain.StudentAttendanceDomain import StudentAttendanceDomain
+
 app = Flask(__name__)
 app.config['TRAP_HTTP_EXCEPTIONS'] = True
 app.config['PROPAGATE_EXCEPTIONS'] = True
@@ -32,11 +35,13 @@ def home():
 
 
 class StudentAttandence(Resource):
+    def get(Self):
+
     def post(self):
         data = request.get_json()
-        result = MotorChainDomain.handleMotorChainCalculationTypes(data)
-        if result:
-            return result, 200
+        studentAttandenceDomain = StudentAttendanceDomain(data)
+        studentAttandenceDomain.update()
+        return 200
 
 
 # class AllMaterials(Resource):
@@ -78,7 +83,7 @@ class StudentAttandence(Resource):
 #         return newHeadMotor, 200
 
 
-# api.add_resource(StudentAttandence, '/studentAttandence/saveStatus')
+api.add_resource(StudentAttandence, '/studentAttandence')
 
 
 if __name__ == "__main__":
