@@ -34,8 +34,7 @@ def home():
 class StudentAttandence(Resource):
     def post(self):
         data = request.get_json()
-        result = MotorChainDomain.handleMotorChainCalculationTypes(
-            data['motorChain'], data['calculationType'])
+        result = MotorChainDomain.handleMotorChainCalculationTypes(data)
         if result:
             return result, 200
 
