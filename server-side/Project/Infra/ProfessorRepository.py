@@ -2,6 +2,10 @@ from Models import Professor
 from app import db
 
 
+def getAll():
+    return Professor.query.all()
+
+
 def update(updatedProfessor):
     professor = Professor.query.filter_by(id=updatedProfessor.id)
     professor.cpf = updatedProfessor.cpf

@@ -17,3 +17,7 @@ def add(studentClass):
 def delete(studentClass):
     db.session.delete(studentClass)
     db.session.commit()
+
+
+def getByClassId(classId):
+    return StudentClass.query.filter_by(id=classId)

@@ -2,6 +2,14 @@ from Models import Class
 from app import db
 
 
+def getAll():
+    return Class.query.all()
+
+
+def getByClassId(classId):
+    return Class.query.filter_by(id=classId)
+
+
 def update(classObject):
     classObject = Class.query.filter_by(id=classObject.id)
     classObject.professorId = classObject.professorId

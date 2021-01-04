@@ -3,18 +3,21 @@ from Models.Professor import Professor
 
 class ProfessorDomain():
     self __init__(self, Professor):
-        self.Professor = Professor(
+        self.professor = Professor(
             id=Professor["id"],
             cpf=Professor["cpf"],
             firstName=Professor["firstName"],
             lastName=Professor["lastName"],
             birthDate=Professor["birthDate"])
 
+    def getAll(self):
+        return self.professor.getAll()
+
     def update(self):
-        self.Professor.update()
+        self.professor.update()
 
     def add(self):
-        self.Professor.add()
+        self.professor.add()
 
     def delete(self):
-        self.Professor.delete()
+        self.professor.delete()

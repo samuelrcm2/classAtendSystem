@@ -6,6 +6,9 @@ from flask_sqlalchemy import SQLAlchemy
 
 
 from Domain.StudentAttendanceDomain import StudentAttendanceDomain
+from Domain.ClassDomain import ClassDomain
+from Domain.ProfessorDomain import ProfessorDomain
+from Domain.StudentDomain import StudentDomain
 
 app = Flask(__name__)
 app.config['TRAP_HTTP_EXCEPTIONS'] = True
@@ -34,8 +37,9 @@ def home():
     return "Attendance classes manager"
 
 
-class StudentAttandence(Resource):
+class StudentAttandenceController(Resource):
     def get(Self):
+        return StudentAttendanceDomain().getAll(), 200
 
     def post(self):
         data = request.get_json()
@@ -44,46 +48,32 @@ class StudentAttandence(Resource):
         return 200
 
 
-# class AllMaterials(Resource):
-#     def get(self):
-#         materials = MaterialsDomain.getAllMaterials()
-#         if materials:
-#             return materials, 200
-#         else:
-#             return {"message": "No material found"}, 404
+class ClassController(Resource):
+    def get(self):
+        return ClassDomain().getAll(), 200
 
 
-# class MaterialsById(Resource):
-#     def get(self, Id):
-#         material = MaterialsDomain.getMaterialById(Id)
-#         if material:
-#             return material, 200
-#         else:
-#             return {"message": "Material not found"}, 404
+class ClassByIdController(Resource):
+    def get(self, classId):
+        return ClassDomain().getByClassId(classId), 200
 
 
-# class AllScrewPatterns(Resource):
-#     def get(self):
-#         screwPatterns = ScrewDomain.getAllScrewPatterns()
-#         return screwPatterns, 200
+class ProfessorController(Resource):
+    def get(self):
+        return ProfessorDomain().getAll(), 200
 
 
-# class ScrewPatternByDiameter(Resource):
-#     def get(self):
-#         data = request.get_json()
-#         screwPatterns = ScrewDomain.getScrewsPatternsByDiameter(
-#             data['internalDiameter'], data['externalDiameter'])
-#         return screwPatterns, 200
+class StudentController(Resource):
+    def get(self, classId):
+        data = request.get_json()
+        return StudentDomain().getByClassId(classId), 200
 
 
-# class HeadMotor(Resource):
-#     def post(self):
-#         data = request.get_json()
-#         newHeadMotor = HeadChainDomain.defineScrewBySelectedScrew(data)
-#         return newHeadMotor, 200
-
-
-api.add_resource(StudentAttandence, '/studentAttandence')
+api.add_resource(StudentAttandenceController, '/studentAttandence')
+api.add_resource(ClassController, '/class')
+api.add_resource(ClassByIdController, '/class/<int:Id>')
+api.add_resource(ProfessorController, '/professor')
+api.add_resource(StudentController, '/student/<int:Id>')
 
 
 if __name__ == "__main__":

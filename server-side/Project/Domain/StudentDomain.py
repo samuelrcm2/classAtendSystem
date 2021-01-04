@@ -10,6 +10,9 @@ class StudentDomain():
             lastName=Student["lastName"],
             birthDate=Student["birthDate"])
 
+    def getByClassId(self, classId):
+        return self.student.getByClassId
+
     def update(self):
         self.student.update()
 

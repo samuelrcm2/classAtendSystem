@@ -9,6 +9,12 @@ class ClassDomain():
             name=Class["name"],
             numberOfClasses=Class["numberOfClasses"])
 
+    def getAll(self):
+        return self.classObject.getAll()
+
+    def getByClassId(self, classId):
+        return self.classObject.getByClassId(classId)
+
     def update(self):
         self.classObject.update()
 
