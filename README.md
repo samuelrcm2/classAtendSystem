@@ -11,7 +11,7 @@ Para usar Class Atend System você precisa instalar
 - Node 12.16.x ou mais novo
 - Python 3.8.2 ou mais novo
 
-## Como instalar os pacotes necessário
+## Como instalar os pacotes necessários
 
 No prompt de comando acesse o caminho: `[yourMachine]/classAtendSystem/client-side` e rodar:
 
