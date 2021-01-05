@@ -1,6 +1,6 @@
 from datetime import datetime
 from Enums import AttendanceStatus
-from app import db
+from Models.Base import db
 
 
 class StudentAttendance(db.Model):

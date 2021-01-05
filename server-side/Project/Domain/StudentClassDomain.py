@@ -2,7 +2,7 @@ from Models.StudentClass import StudentClass
 
 
 class StudentClassDomain():
-    self __init__(self, studentClass):
+    def __init__(self, studentClass):
         self.studentClass = StudentClass(
             id=studentClass["id"],
             studentId=studentClass["studentId"],

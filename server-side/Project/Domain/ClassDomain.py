@@ -2,7 +2,7 @@ from Models.Class import Class
 
 
 class ClassDomain():
-    self __init__(self, Class):
+    def __init__(self, Class):
         self.classObject = Class(
             id=Class["id"],
             professorId=Class["professorId"],

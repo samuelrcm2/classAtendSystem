@@ -2,7 +2,7 @@ from Models.Student import Student
 
 
 class StudentDomain():
-    self __init__(self, Student):
+    def __init__(self, Student):
         self.student = Student(
             id=Student["id"],
             cpf=Student["cpf"],
